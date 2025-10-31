@@ -6,7 +6,7 @@ import { getFirestore, collection, addDoc } from "https://www.gstatic.com/fireba
 const firebaseConfig = {
   apiKey: "SUA_API_KEY",
   authDomain: "SEU_PROJETO.firebaseapp.com",
-  projectId: "SEU_PROJETO",
+  projectId: "ongeneration-178b1",
   storageBucket: "SEU_PROJETO.appspot.com",
   messagingSenderId: "1234567890",
   appId: "1:1234567890:web:abc123"
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const numTelefone  = document.getElementById("telefone").value;
 
     try {
-      await addDoc(collection(db, "usuarios"), {
+      const docRef = await addDoc(collection(db, "usuarios"), {
         nome: nomeCompleto,
         cpf: cpfNum,
         nasc: dataNasc,

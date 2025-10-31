@@ -1,0 +1,66 @@
+/* HEADER */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root {
+    /* Cores Prédefinidas */
+    --corAzul: #0F5A93;
+    --corBranco: #FAFAFA;
+    --corCinzaClaro: #f8f8f8;
+    --corCinzaEscuro: #616161;
+    --corPreto: #000;
+
+    /* Tipografia */
+    --fonteInter: 'Inter', sans-serif;
+}
+
+*{
+    /* Dimensionamento Padrão Global */
+    margin: 0;
+    padding: 0;
+
+    /* Fonte */
+    font-family: var(--fonteInter);
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 5px 100px;
+  border-bottom: 1px solid #ddd;
+
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.288);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  width: 50px;
+}
+
+.navbar {
+  display: flex;
+  gap: 40px;
+}
+
+
+.navbar a {
+  color: var(--corAzul);
+  text-decoration: none;
+  font-weight: 600;
+
+  border: 1px solid #fff;
+}
+
+.navbar a:hover {
+  text-decoration: underline 1.5px;
+}
+
+.user-icon .circle {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #d9d9d9;
+}
