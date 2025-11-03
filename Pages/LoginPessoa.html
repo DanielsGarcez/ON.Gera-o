@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+
+    <!-- Link Estilos -->
+    <link rel="stylesheet" href="../Styles/login.css">
+    <link rel="stylesheet" href="../Styles/header.css">
+
+    <script type="module" src="../js/firebase.js"></script>
+
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="topbar">
+        <picture class="logo-area">
+            <a href="../index.html">
+                <img src="../img/Logo-Black.png" alt="Logo Divulga ONGs" class="logo">
+            </a>
+        </picture>
+        <nav class="navbar">
+            <a href="TiposOng.html">LISTA DE ONGS</a>
+            <a href="CadastroOng.html">CADASTRAR ONG</a>
+            <a href="#">SOBRE NÓS</a>
+        </nav>
+        <aside class="user-icon">
+            <picture class="circle">
+                <img src="../img/Icon-User.png" class="user-icon">
+            </picture>
+        </aside>
+    </header> 
+
+    <main>
+        <article class="destaque-cadastro">
+            <h2>Cada pessoa que passa por nossos projetos carrega uma história única — e acreditamos no poder de reescrever essas histórias com amor, solidariedade e ação.</h2>
+        </article>
+
+        <article class="bordas login">
+            <form action="." id="form-login">
+                <section class="dados-login">
+                    <h1>ENTRAR</h1>
+
+                    <section class="grupo-input">
+                        <label>Email:</label>
+                        <input type="text">
+                    </section>
+
+                    <section class="grupo-input">
+                        <label>Senha:</label>
+                        <input type="password">
+                    </section>
+                </section>
+                <button class="btn-recuperar" type="submit">Esqueci minha senha</button>
+                <button class="btn-login">Login</button>
+                <button class="btn-recuperar btn-cadastrar-se">Cadastrar-se</button>
+            </form>
+                <picture class="imagem-maos">
+                    <img src="../img/Imagem-Maos.jpeg" alt="imagem-feliz" class="ilustracao">
+                </picture>
+        </article>
+    </main>
+</body>
+</html>

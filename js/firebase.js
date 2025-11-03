@@ -21,7 +21,7 @@ export { db, collection, addDoc };
 
 // Função para enviar dados
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("formCadastro").addEventListener("submit", async (e) => {
+  document.getElementById("form-cadastro").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const nomeCompleto = document.getElementById("nome-completo").value;
