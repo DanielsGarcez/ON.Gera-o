@@ -87,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const siteOng  = document.getElementById("site-ong").value;
 
     try {
-      const docRef = await addDoc(collection(db, "usuarios"), {
+      const docRef = await addDoc(collection(db, "ongs"), {
         nome: nomeOng,
         cnpj: numCnpj,
         atuacao: areaAtuacao,
