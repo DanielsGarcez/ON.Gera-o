@@ -46,16 +46,13 @@ main article{
     max-width: 1280px;
 
     /* Bordas */
-    border-radius: 0px 0px 10px 10px;
-    border-top: 0px;
+    border-radius: 10px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-
 .cadastro{
     /* Proporção */
-    padding: 100px;
-
+    padding: 50px;
 
     /* Grid de alinhamento */
     display: grid;
@@ -64,23 +61,13 @@ main article{
     gap: 150px;
 }
 
-#form-cadastro {
-    padding-bottom: 60px;
+.titulo{
+    padding-top: 50px;
+    text-align: center;
+    color: var(--corAzul);
 }
 
-section.dados-pessoais{
-    display: flex;
-    flex-direction: column ;
-    margin-bottom: 15px;
-    min-width: 300px;
-}
 
-section.dados-endereco{
-    display: flex;
-    flex-direction: column ;
-    margin-bottom: 15px;
-    min-width: 300px;
-}
 
 label{
     min-height: 25px;
@@ -90,7 +77,6 @@ label{
     max-width: fit-content;
 }
 
-
 input{
     /* Dimensionamento */
     min-height: 30px;
@@ -99,7 +85,6 @@ input{
     border: 1px solid var(--corCinzaEscuro); 
     border-radius: 5px;
 }
-
 
 .grupo-input {
     display: flex;
@@ -147,9 +132,75 @@ aside input{
     background-color: var(--corBranco);
     border: 1px solid #0F5A93;
     cursor: pointer;
+}.btn-cadastro{
+    /* Dimensionamento */
+    margin: auto;
+    display: block;
+    padding: 10px 100px;
+    font-size: 1.5em;
+    font-weight: bold;
+
+    /* Cores */
+    color: var(--corBranco);
+    background-color: var(--corAzul);
+    border: 1px solid var(--corAzul);
+    border-radius: 10px;
+
+}
+
+.btn-cadastro:hover{
+    transition: 500ms;
+    color: var(--corAzul);
+    background-color: var(--corBranco);
+    border: 1px solid #0F5A93;
+    cursor: pointer;
+}
+
+/* ---------- Página de Cadastro USUARIO ---------- */
+
+#form-cadastro {
+    margin-top: 70px;
+    padding-top: 30px;
+    padding-bottom: 90px;
+}
+
+section.dados-pessoais{
+    display: flex;
+    flex-direction: column ;
+    margin-bottom: 15px;
+    min-width: 300px;
+}
+
+section.dados-endereco{
+    display: flex;
+    flex-direction: column ;
+    margin-bottom: 15px;
+    min-width: 300px;
+}
+
+/* ---------- Página de Cadastro ONG ---------- */
+
+#form-ONG{
+    margin-top: 70px;
+    padding-top: 30px;
+    padding-bottom: 90px;
+}
+
+#descricao{
+    height: 100px;
+    text-align: justify;
+    resize: none;
+    overflow: hidden;      /* 🔒 Impede que o texto “vaze” da caixa */
+    white-space: pre-wrap; /* 🔄 Quebra linhas automaticamente */
+    word-wrap: break-word; /* 🔤 Quebra palavras longas */
 }
 
 /* ---------- Página de Login ---------- */
+
+.login{  
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 #form-login {
     padding: 0px 100px;
@@ -157,11 +208,7 @@ aside input{
 
     width: 280px;
     row-gap: 10px;
-}
 
-.login{  
-    display: flex;
-    flex-wrap: nowrap;
 }
 
 .dados-login{
@@ -171,7 +218,7 @@ aside input{
 .dados-login h1{
     text-align: center;
     padding: 100px 0px 70px 0px;
-    color: var(--corCinzaEscuro);
+    color: var(--corAzul);
 }
 
 .btn-recuperar{
@@ -189,7 +236,7 @@ aside input{
 .btn-recuperar:hover{
     transition: 500ms;
     color: var(--corAzul);
-    background-color: var(--corBranco);
+    background-color: white;
     text-decoration: underline;
     cursor: pointer;
 }
@@ -209,6 +256,7 @@ aside input{
     border: 1px solid var(--corAzul);
     border-radius: 10px;
 }
+
 .btn-login:hover{
     transition: 500ms;
     color: var(--corAzul);
@@ -222,7 +270,6 @@ aside input{
     display: flex;
     margin-top: 20px;
 }
-
 
 .imagem-maos{
     /* Proporção */
@@ -243,6 +290,4 @@ aside input{
     /* Alinhamento */
     display: flex;
     object-fit: cover;
-    
-    filter: blur(1px);
 }

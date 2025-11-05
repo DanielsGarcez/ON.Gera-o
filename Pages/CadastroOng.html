@@ -26,19 +26,16 @@
             <a href="#">SOBRE NÓS</a>
         </nav>
         <aside class="user-icon">
-            <picture class="circle">
+            <a href="LoginPessoa.html " class="circle">
                 <img src="../img/Icon-User.png" class="user-icon">
-            </picture>
+            </a>
         </aside>
-    </header> 
+    </header>  
 
     <main>
-        <article class="destaque-cadastro">
-            <h2>Sua ONG faz a diferença — e queremos caminhar ao lado de vocês! — Venha fazer parte dessa rede que acredita no poder da união para mudar o mundo.</h2>
-        </article>
-
         <article class="bordas">
-            <form action="." id="formONG">
+            <form action="." id="form-ONG">
+                <h1 class="titulo">CADASTRAR ONG</h1>
                 <article class="cadastro">
                     <section class="dados-pessoais">
                         <section class="grupo-input">
@@ -56,10 +53,10 @@
                             <input type="text" id="area-atuacao">
                         </section>
 
-                            <section class="grupo-input">
-                                <label>Descrição:</label>
-                                <input type="text" id="descricao">
-                            </section>
+                        <section class="grupo-input">
+                            <label>Descrição:</label>
+                            <textarea id="descricao"></textarea>
+                        </section>
 
                     </section>
                     <section class="dados-endereco">
@@ -103,7 +100,8 @@
                         </section>
                     </section>
                 </article>
-                <button class="btn-cadastro" type="submit">Cadastre-se</button>
+                <button type="submit" class="btn-cadastro">Cadastre-se</button>
+                <button type="button" class="btn-recuperar btn-cadastrar-se" onclick="window.location.href='LoginPessoa.html'">Já tem cadastro?</button>
             </form>
         </article>
     </main>

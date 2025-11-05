@@ -26,24 +26,31 @@
             <a href="#">SOBRE NÓS</a>
         </nav>
         <aside class="user-icon">
-            <picture class="circle">
+            <a href="LoginPessoa.html " class="circle">
                 <img src="../img/Icon-User.png" class="user-icon">
-            </picture>
+            </a>
         </aside>
     </header> 
 
     <main>
-        <article class="destaque-cadastro">
-            <h2>Cada pessoa que passa por nossos projetos carrega uma história única — e acreditamos no poder de reescrever essas histórias com amor, solidariedade e ação.</h2>
-        </article>
-
         <article class="bordas">
             <form action="." id="form-cadastro">
+                <h1 class="titulo">CADASTRAR USUÁRIO</h1>
                 <article class="cadastro">
                     <section class="dados-pessoais">
                         <section class="grupo-input">
                             <label for="nome">Nome Completo:</label>
                             <input type="text" id="nome-completo">
+                        </section>
+
+                        <section class="grupo-input">
+                            <label for="email">Email:</label>
+                            <input type="email" id="email">
+                        </section>
+
+                        <section class="grupo-input">
+                            <label for="senha">Senha:</label>
+                            <input type="password" id="senha">
                         </section>
 
                         <section class="grupo-input">
@@ -61,6 +68,11 @@
                                 <input type="text" id="estado-civil">
                             </section>
                         </aside>
+                    </section>
+
+
+
+                    <section class="dados-endereco">
 
                         <aside class="grupo-input">
                             <section class="grupo-input">
@@ -74,8 +86,6 @@
                             </section>
                         </aside>
 
-                    </section>
-                    <section class="dados-endereco">
                         <section class="grupo-input">
                             <label for="endereco">Endereço:</label>
                             <input type="text" id="endereco">
@@ -111,7 +121,8 @@
                         </section>
                     </section>
                 </article>
-                <button class="btn-cadastro" type="submit">Cadastre-se</button>
+                <button type="submit" class="btn-cadastro" type="submit">Cadastre-se</button>
+                <button type="button" class="btn-recuperar btn-cadastrar-se" onclick="window.location.href='LoginPessoa.html'">Já tem cadastro?</button>
             </form>
         </article>
     </main>

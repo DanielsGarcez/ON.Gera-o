@@ -19,18 +19,20 @@ const db = getFirestore(app);
 // Exporta para usar em outras páginas
 export { db, collection, addDoc };
 
-// Função para enviar dados
+// Função para enviar dados do formulário dos USUÁRIOS
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("form-cadastro").addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const nomeCompleto = document.getElementById("nome-completo").value;
+  const emailUser = document.getElementById("email")
+  const senhaUser = document.getElementById("senha")
   const cpfNum = document.getElementById("cpf").value;
   const dataNasc = document.getElementById("data-nasc").value;
   const estadoCivil = document.getElementById("estado-civil").value;
+
   const valorRenda  = document.getElementById("renda").value;
   const familiar  = document.getElementById("composicao-familiar").value;
-
   const endereco  = document.getElementById("endereco").value;
   const numEndereco  = document.getElementById("num-endereco").value;
   const numCep  = document.getElementById("cep").value;
@@ -41,9 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       const docRef = await addDoc(collection(db, "usuarios"), {
         nome: nomeCompleto,
+        email: emailUser,
+        senha: senhaUser,
         cpf: cpfNum,
         nasc: dataNasc,
         estadoCivil: estadoCivil,
+
         renda: valorRenda,
         familia: familiar,
         endereco: endereco,
@@ -58,6 +63,49 @@ document.addEventListener("DOMContentLoaded", () => {
       e.target.reset();
     } catch (erro) {
       console.error("Erro ao cadastrar:", erro);
+      alert("Erro ao cadastrar");
+    }
+  });
+});
+
+// Função para enviar dados do formulário dos ONGs
+document.addEventListener("DOMContentLoaded", () => {
+  document.getElementById("form-ONG").addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const nomeOng = document.getElementById("nome-ong").value;
+  const numCnpj = document.getElementById("cnpj")
+  const areaAtuacao = document.getElementById("area-atuacao")
+  const descricaoOng = document.getElementById("descricao").value;
+
+  const enderecoOng  = document.getElementById("endereco-ong").value;
+  const numEnderecoOng  = document.getElementById("num-endereco-ong").value;
+  const numCepOng  = document.getElementById("cep-ong").value;
+  const cidadeOng  = document.getElementById("cidade-ong").value;
+  const estadoOng  = document.getElementById("estado-ong").value;
+  const numTelefoneOng  = document.getElementById("telefone-ong").value;
+  const siteOng  = document.getElementById("site-ong").value;
+
+    try {
+      const docRef = await addDoc(collection(db, "usuarios"), {
+        nome: nomeOng,
+        cnpj: numCnpj,
+        atuacao: areaAtuacao,
+        descricao: descricaoOng,
+
+        endereco: enderecoOng,
+        numeroEndereco: numEnderecoOng,
+        cep: numCepOng,
+        cidade: cidadeOng,
+        estado: estadoOng,
+        telefone: numTelefoneOng,
+        site: siteOng,
+        criadoEm: new Date()
+      });
+      alert("Cadastro da Ong realizado com sucesso!" + docRef.id);
+      e.target.reset();
+    } catch (erro) {
+      console.error("Erro ao cadastrar Ong:", erro);
       alert("Erro ao cadastrar");
     }
   });

@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="Styles/style.css">
 </head>
 <body>
-
   <!-- Header -->
   <header class="header">
     <section class="header-left">
@@ -26,7 +25,9 @@
     </section>
 
     <section class="profile">
-      <picture class="avatar"><img src="img/Icon-User.png" class="avatar"></picture>
+      <a href="Pages/LoginPessoa.html" class="avatar">
+        <img src="img/Icon-User.png" class="avatar">
+      </a>
     </section>
   </header>
 
@@ -40,12 +41,12 @@
   <main>
     <!-- Hero section -->
     <section class="hero">
-      <div class="placeholder">(imagem)</div>
+      <aside class="placeholder">(imagem)</aside>
     </section>
     <!-- Lista de ONGs -->
-    <section class="section blue-section">
-      <div class="text-box">
-        <div class="text">
+    <article class="section blue-section">
+      <section class="text-box">
+        <section class="text">
           <h2>LISTA DE ONGS</h2>
           <ul>
             <li>Arte e Cultura</li>
@@ -54,35 +55,35 @@
             <li>Apoio às Mulheres</li>
             <li>Crianças e idosos</li>
           </ul>
-          <button class="btn">Ver mais →</button>
-        </div>
-      </div>
+          <button class="btn" onclick="window.location.href='/Pages/TiposOng.html'">Ver mais →</button>
+        </section>
+      </section>
       <picture class="placeholder">(imagem)</picture>
-    </section>
+    </article>
     <!-- Comunidade -->
-    <section class="section alt-section">
-      <div class="placeholder">(imagem)</div>
-      <div class="text-box">
+    <article class="section alt-section">
+      <aside class="placeholder">(imagem)</aside>
+      <section class="text-box">
         <h2>Entre para nossa comunidade!</h2>
         <p>
           Aqui você encontra apoio, oportunidades e um espaço de acolhimento.
           Convidamos você a participar das atividades de nossas ONGs parceiras.
         </p>
-        <button class="btn">Inscrever-se</a></button>
-      </div>
-    </section>
+        <button class="btn" onclick="window.location.href='Pages/CadastroPessoa.html'">Inscrever-se</button>
+      </section>
+    </article>
     <!-- Cadastro -->
-    <section class="section blue-section">
-      <div class="text-box">
+    <article class="section blue-section">
+      <section class="text-box">
         <h2>CADASTRE SUA ONG</h2>
         <p>
           Convidamos sua organização a integrar nossa plataforma e fortalecer o
           trabalho coletivo pelo bem comum.
         </p>
-        <button class="btn">Cadastrar</button>
-      </div>
-      <div class="placeholder">(imagem)</div>
-    </section>
+        <button onclick="window.location.href='Pages/CadastroOng.html'" class="btn">Cadastrar</button>
+      </section>
+      <aside class="placeholder">(imagem)</aside>
+    </article>
   </main>
 
   <footer class="footer"></footer>

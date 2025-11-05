@@ -187,7 +187,7 @@ body {
   margin-top: 30px;  
   background: #fff;
   color: var(--corAzul);
-  border: none;
+  border: 1px solid var(--corAzul);
   padding: 10px 20px;
   border-radius: 6px;
   cursor: pointer;
@@ -198,10 +198,23 @@ body {
   background: #fff;
   color: var(--corAzul);
 }
-
-.alt-section .btn {
+.blue-section .btn:hover {
+  transition: 500ms;
+  border: 1px solid #fff;
   background: var(--corAzul);
   color: #fff;
+}
+
+.alt-section .btn {
+  border: 1px solid #fff;
+  background: var(--corAzul);
+  color: #fff;
+}
+
+.alt-section .btn:hover {
+  transition: 500ms;
+  background: white;
+  color: var(--corAzul);
 }
 
 /* FOOTER */
