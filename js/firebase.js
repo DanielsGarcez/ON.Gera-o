@@ -21,12 +21,19 @@ export { db, collection, addDoc };
 
 // Função para enviar dados do formulário dos USUÁRIOS
 document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById("form-cadastro").addEventListener("submit", async (e) => {
+  const form = document.getElementById("form-cadastro");
+
+  if (!form) {
+    console.error("Elemento com id 'form-cadastro' não encontrado no HTML!");
+    return;
+  }
+
+  form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
   const nomeCompleto = document.getElementById("nome-completo").value;
-  const emailUser = document.getElementById("email")
-  const senhaUser = document.getElementById("senha")
+  const emailUser = document.getElementById("email").value
+  const senhaUser = document.getElementById("senha").value
   const cpfNum = document.getElementById("cpf").value;
   const dataNasc = document.getElementById("data-nasc").value;
   const estadoCivil = document.getElementById("estado-civil").value;
@@ -74,8 +81,8 @@ document.addEventListener("DOMContentLoaded", () => {
   e.preventDefault();
 
   const nomeOng = document.getElementById("nome-ong").value;
-  const numCnpj = document.getElementById("cnpj")
-  const areaAtuacao = document.getElementById("area-atuacao")
+  const numCnpj = document.getElementById("cnpj").value
+  const areaAtuacao = document.getElementById("area-atuacao").value
   const descricaoOng = document.getElementById("descricao").value;
 
   const enderecoOng  = document.getElementById("endereco-ong").value;
