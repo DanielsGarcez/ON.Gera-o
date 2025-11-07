@@ -14,10 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  // Pega os ID do Formulario de Usuários
+  // Pega os ID do Formulario de USUÁRIOS
   const nomeCompleto = document.getElementById("nome-completo").value;
-  const emailUser = document.getElementById("email").value
-  const senhaUser = document.getElementById("senha").value
+  const emailUser = document.getElementById("email").value.trim();
+  const senhaUser = document.getElementById("senha").value.trim();
   const cpfNum = document.getElementById("cpf").value;
   const dataNasc = document.getElementById("data-nasc").value;
   const estadoCivil = document.getElementById("estado-civil").value;
@@ -31,7 +31,41 @@ document.addEventListener("DOMContentLoaded", () => {
   const estado  = document.getElementById("estado").value;
   const numTelefone  = document.getElementById("telefone").value;
 
-    // Envia para o Banco de Dados dos Usuários
+
+    if ( 
+        !nomeCompleto ||
+        !emailUser ||
+        !senhaUser ||
+        !cpfNum ||
+        !dataNasc ||
+        !estadoCivil ||
+
+        !valorRenda ||
+        !familiar ||
+        !endereco ||
+        !numEndereco ||
+        !numCep ||
+        !cidade ||
+        !estado ||
+        !numTelefone
+    ) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+
+    const emailValido = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailUser);
+    if (!emailValido) {
+        alert("E-mail inválido.");
+        return;
+    }
+
+    if (senha.length < 6) {
+        alert("A senha deve ter pelo menos 6 caracteres.");
+        return;
+    }
+    console.log("Cadastro válido! Enviando dados...");
+
+    // Envia para o Banco de Dados dos USUÁRIOS
     try {
       const docRef = await addDoc(collection(db, "usuarios"), {
         nome: nomeCompleto,
