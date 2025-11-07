@@ -10,9 +10,10 @@
     <link rel="stylesheet" href="../Styles/header.css">
 
     <script type="module" src="../js/firebase.js"></script>
+    <script type="module" src="../js/cadastroUser.js"></script>
 
 </head>
-<body>
+<body>cada
     <!-- HEADER -->
     <header class="topbar">
         <picture class="logo-area">
@@ -58,11 +59,12 @@
                             <input type="text" id="cpf">
                         </section>
 
-                        <aside class="grupo-input">
+                        <aside class="grupo-input min-grupo-input">
                             <section class="grupo-input">
                                 <label for="nasc">Data de Nascimento:</label>
                                 <input type="date" id="data-nasc">
                             </section>
+                            
                             <section class="grupo-input">
                                 <label for="civil">Estado Civil:</label>
                                 <input type="text" id="estado-civil">
@@ -70,53 +72,58 @@
                         </aside>
                     </section>
 
-
-
                     <section class="dados-endereco">
-
-                        <aside class="grupo-input">
+                        <aside class="grupo-input min-grupo-input">
                             <section class="grupo-input">
-                                <label for="renda">Renda:</label>
+                                <label for="renda">Renda:</label> <!-- RENDA -->
                                 <input type="text" id="renda">
                             </section>
 
                             <section class="grupo-input">
-                                <label for="familia">Composição Familiar</label>
+                                <label for="familia">Composição Familiar</label> <!-- FAMILIA -->
                                 <input type="text" id="composicao-familiar">
                             </section>
                         </aside>
 
                         <section class="grupo-input">
-                            <label for="endereco">Endereço:</label>
+                            <label for="endereco">Endereço:</label> <!-- ENDEREÇO -->
                             <input type="text" id="endereco">
                         </section>
 
-                        <aside class="grupo-input">
+                        <aside class="grupo-input min-grupo-input">
                             <section class="grupo-input">
-                                <label for="num-endereco">N°:</label>
+                                <label for="num-endereco">N°:</label> <!-- NUMERO -->
                                 <input type="number" id="num-endereco">
                             </section class="grupo-input">
 
                             <section class="grupo-input">
-                                <label for="cep-endereco">CEP:</label>
+                                <label for="cep-endereco">CEP:</label> <!-- CEP -->
                                 <input type="text" id="cep">
                             </section>
                         </aside>
 
-                        <aside class="grupo-input">
+                        <aside class="grupo-input min-grupo-input">
                             <section class="grupo-input">
-                                <label for="cidade">Cidade:</label>
-                                <input type="text" id="cidade">
+                                <label for="cidade">Cidade:</label> <!-- CIDADE -->
+                                <input list="cidades" type="text" id="cidade">
                             </section>
 
+                            <datalist id="cidades">
+                                <option value="São Paulo">
+                                <option value="Rio de Janeiro">
+                                <option value="Belo Horizonte">
+                                <option value="Curitiba">
+                                <option value="Salvador">
+                            </datalist>
+
                             <section class="grupo-input">
-                                <label for="estado">Estado:</label>
+                                <label for="estado">Estado:</label> <!-- ESTADO -->
                                 <input type="text" id="estado">
                             </section>
                         </aside>
             
                         <section class="grupo-input">
-                            <label for="telefone">Telefone:</label>
+                            <label for="telefone">Telefone:</label> <!-- TELEFONE -->
                             <input type="tel" id="telefone">
                         </section>
                     </section>

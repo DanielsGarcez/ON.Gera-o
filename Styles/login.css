@@ -93,21 +93,17 @@ input{
     min-width: 100%;
 }
 
-
 aside.grupo-input{
     /* Dimensionamento */
     display: grid;
+    align-items: center;
     grid-template-columns: repeat(2, 50%);
+    gap: 20px;
     margin: 0px;
-    max-width: fit-content;
 }
 
-aside section.grupo-input{
-    width: 40%;
-}
-
-aside input{
-    width: 100%;
+.min-grupo-input input{
+    width: 90%;
 }
 
 .btn-cadastro{
@@ -177,6 +173,7 @@ section.dados-endereco{
     margin-bottom: 15px;
     min-width: 300px;
 }
+
 
 /* ---------- Página de Cadastro ONG ---------- */
 
