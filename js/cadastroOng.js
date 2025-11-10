@@ -1,4 +1,4 @@
-// Importa o Firebase e configura (deixe igual ao seu firebase.js)
+// Importa o Firebase e configura (deixe igual ao firebase.js)
 import { db } from "./firebase.js";
 import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
 
@@ -26,6 +26,26 @@ document.addEventListener("DOMContentLoaded", () => {
   const estadoOng  = document.getElementById("estado-ong").value;
   const numTelefoneOng  = document.getElementById("telefone-ong").value;
   const siteOng  = document.getElementById("site-ong").value;
+
+
+    if ( 
+      !nomeOng ||
+      !numCnpj ||
+      !areaAtuacao ||
+      !descricaoOng ||
+
+      !enderecoOng ||
+      !numEnderecoOng ||
+      !numCepOng ||
+      !cidadeOng ||
+      !estadoOng ||
+      !numTelefoneOng ||
+      !siteOng
+    ) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+    }
+    console.log("Cadastro válido! Enviando dados...");
 
     try {
       // Salva no Firestore em outra coleção

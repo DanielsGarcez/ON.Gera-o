@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../Styles/header.css">
 
     <script type="module" src="../js/firebase.js"></script>
+    <script type="module" src="../js/login.js"></script>
 
 </head>
 <body>
@@ -44,16 +45,18 @@
 
                     <section class="grupo-input">
                         <label>Email:</label>
-                        <input type="text">
+                        <input id="email" type="text">
+                        <p id="mensagem"></p>
                     </section>
 
                     <section class="grupo-input">
                         <label>Senha:</label>
-                        <input type="password">
+                        <input id="senha" type="password">
+                        <p id="mensagem"></p>
                     </section>
                 </section>
                 <button class="btn-recuperar" type="submit">Esqueci minha senha</button>
-                <button type="submit" class="btn-login">Login</button>
+                <button type="submit" class="btn-login" onclick="window.location.href='#'">Login</button>
                 <button type="button" class="btn-recuperar btn-cadastrar-se" onclick="window.location.href='CadastroPessoa.html'">Cadastrar-se</button>
             </form>
                 <picture class="imagem-maos">

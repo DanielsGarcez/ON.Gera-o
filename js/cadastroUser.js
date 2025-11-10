@@ -86,8 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
         
         criadoEm: new Date()
       });
-      alert("Cadastro realizado com sucesso!" + docRef.id);
+      alert("Cadastro realizado com sucesso!");
       e.target.reset();
+      console.log(docRef.id);
     } catch (erro) {
       console.error("Erro ao cadastrar:", erro);
       alert("Erro ao cadastrar");
