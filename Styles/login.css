@@ -128,7 +128,9 @@ aside.grupo-input{
     background-color: var(--corBranco);
     border: 1px solid #0F5A93;
     cursor: pointer;
-}.btn-cadastro{
+}
+
+.btn-cadastro{
     /* Dimensionamento */
     margin: auto;
     display: block;
@@ -194,7 +196,8 @@ section.dados-endereco{
 
 /* ---------- Página de Login ---------- */
 
-.login{  
+.login{
+    margin-top: 30px;
     display: flex;
     flex-wrap: nowrap;
 }
@@ -282,7 +285,7 @@ section.dados-endereco{
     height: 100%;
 
     /* Borda Arredondada */
-    border-radius: 0px 0px 10px;
+    border-radius: 0px 10px 10px 0px;
 
     /* Alinhamento */
     display: flex;

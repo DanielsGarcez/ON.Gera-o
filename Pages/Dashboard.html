@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+
+    <!-- Link Estilos -->
+    <link rel="stylesheet" href="../Styles/header.css">
+    <link rel="stylesheet" href="../Styles/dashboard.css">
+    <link rel="stylesheet" href="../Styles/login.css">
+
+    <!-- Link Scripts -->
+    <script type="module" src="../js/header.js"></script>
+    <script type="module" src="../js/dashboard.js"></script>
+</head>
+<body>
+  <main>
+    <article class="perfil">
+
+      <h2>Seu Perfil</h2>
+      <hr>
+      <picture>
+        <img src="" alt="Foto-Perfil">
+      </picture>
+
+      <form action="." class="cadastro">
+
+        <section class="dados-perfil">
+          <section class="grupo-input">
+            <label for="">Email:</label>
+            <input type="email">
+          </section>
+          <section class="grupo-input">
+            <label for="">Nome:</label>
+            <input type="text">
+          </section>
+          <section class="grupo-input">
+            <label for="">CPF:</label>
+            <input type="text">
+          </section>
+          <section class="grupo-input">
+            <label for="">Data de Nascimento:</label>
+            <input type="date">
+          </section>
+          <section class="grupo-input">
+            <label for="">Estado Civil:</label>
+            <input type="text">
+          </section>
+          
+          <section class="grupo-input">
+            <label for="">Renda:</label>
+            <input type="text">
+          </section>
+          
+          <section class="grupo-input">
+            <label for="">Composição Familiar:</label>
+            <input type="text">
+          </section>
+          
+          <section class="grupo-input">
+            <label for="">Endereço:</label>
+            <input type="text">
+          </section>
+          
+          <section class="grupo-input">
+            <label for="">N°:</label>
+            <input type="number">
+          </section>
+          
+          <section class="grupo-input">
+            <label for="">CEP:</label>
+            <input type="text">
+          </section>
+          <section class="grupo-input">
+            <label for="">Cidade:</label>
+            <input type="text">
+          </section>
+          <section class="grupo-input">
+            <label for="">Estado:</label>
+            <input type="text">
+          </section>
+          <section class="grupo-input">
+            <label for="">Telefone:</label>
+            <input type="text">
+          </section>
+        </section>
+      </form>
+    </article>
+
+
+
+    <h1>Bem-vindo!</h1>
+
+    <p>Usuário logado: <span id="userEmail"></span></p>
+    
+    <button onclick="logout()">Sair</button>
+  </main>
+</body>
+</html>

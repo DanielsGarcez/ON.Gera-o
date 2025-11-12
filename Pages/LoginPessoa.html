@@ -6,33 +6,15 @@
     <title>Login</title>
 
     <!-- Link Estilos -->
-    <link rel="stylesheet" href="../Styles/login.css">
     <link rel="stylesheet" href="../Styles/header.css">
+    <link rel="stylesheet" href="../Styles/login.css">
 
-    <script type="module" src="../js/firebase.js"></script>
+    <!-- Link Scripts -->
+    <script type="module" src="../js/header.js"></script>
     <script type="module" src="../js/login.js"></script>
 
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="topbar">
-        <picture class="logo-area">
-            <a href="../index.html">
-                <img src="../img/Logo-Black.png" alt="Logo Divulga ONGs" class="logo">
-            </a>
-        </picture>
-        <nav class="navbar">
-            <a href="TiposOng.html">LISTA DE ONGS</a>
-            <a href="CadastroOng.html">CADASTRAR ONG</a>
-            <a href="#">SOBRE NÓS</a>
-        </nav>
-        <aside class="user-icon">
-            <a href="LoginPessoa.html " class="circle">
-                <img src="../img/Icon-User.png" class="user-icon">
-            </a>
-        </aside>
-    </header> 
-
     <main>
         <article class="destaque-cadastro">
             <h2>Cada pessoa que passa por nossos projetos carrega uma história única — e acreditamos no poder de reescrever essas histórias com amor, solidariedade e ação.</h2>
@@ -45,18 +27,21 @@
 
                     <section class="grupo-input">
                         <label>Email:</label>
-                        <input id="email" type="text">
+                        <input id="email" type="email" autocomplete="email">
                         <p id="mensagem"></p>
                     </section>
 
                     <section class="grupo-input">
                         <label>Senha:</label>
-                        <input id="senha" type="password">
+                        <input id="senha" type="password" autocomplete="current-password"> 
                         <p id="mensagem"></p>
                     </section>
                 </section>
+
                 <button class="btn-recuperar" type="submit">Esqueci minha senha</button>
-                <button type="submit" class="btn-login" onclick="window.location.href='#'">Login</button>
+
+                <button type="submit" id="botao-login" class="btn-login">Login</button>
+
                 <button type="button" class="btn-recuperar btn-cadastrar-se" onclick="window.location.href='CadastroPessoa.html'">Cadastrar-se</button>
             </form>
                 <picture class="imagem-maos">
@@ -66,4 +51,3 @@
     </main>
 </body>
 </html>
-

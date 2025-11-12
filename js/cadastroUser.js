@@ -1,6 +1,6 @@
-// Importa o Firebase e configura (deixe igual ao seu firebase.js)
+// Importa o Firebase e configura
 import { db } from "./firebase.js";
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-firestore.js";
+import { collection, addDoc } from "https://www.gstatic.com/firebasejs/11.0.1/firebase-firestore.js";
 
 // Função para enviar dados do formulário dos USUÁRIOS
 document.addEventListener("DOMContentLoaded", () => {
