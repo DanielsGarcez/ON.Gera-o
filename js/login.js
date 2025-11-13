@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", () => {
   onAuthStateChanged(auth, (user) => {
     console.log("onAuthStateChanged:", user);
     if (user) {
-      mensagem.textContent = `Já logado como ${user.email}`;
+      mensagem.textContent = `Logado com: ${user.email}`;
       mensagem.style.color = "green";
     }
   });
