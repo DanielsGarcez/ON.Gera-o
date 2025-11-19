@@ -4,7 +4,7 @@ import { signInWithEmailAndPassword, onAuthStateChanged } from "https://www.gsta
 
 console.log("login.js carregado");
 
-// espera DOM pronto (defer + type=module normalmente já garante, mas é seguro)
+// espera DOM pronto
 window.addEventListener("DOMContentLoaded", () => {
   console.log("DOM pronto");
 
@@ -28,18 +28,21 @@ window.addEventListener("DOMContentLoaded", () => {
   });
 
   form.addEventListener("submit", async (e) => {
+    // Pega o conteúdo do fomulário
     e.preventDefault(); // evita reload da página
     mensagem.textContent = "";
     const email = emailInput.value.trim();
     const senha = senhaInput.value.trim();
 
-    // validação simples
+    // Validação de Campos
     if (!email || !senha) {
       mensagem.textContent = "Preencha todos os campos.";
       mensagem.style.color = "red";
       console.warn("Validação falhou: campos vazios");
       return;
     }
+
+    // Validação de Emails
     const regexEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!regexEmail.test(email)) {
       mensagem.textContent = "Digite um e-mail válido.";
@@ -48,6 +51,7 @@ window.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
+    // Teste de Login
     try {
       console.log("Tentando signInWithEmailAndPassword", email);
       const userCredential = await signInWithEmailAndPassword(auth, email, senha);
@@ -56,8 +60,10 @@ window.addEventListener("DOMContentLoaded", () => {
       mensagem.style.color = "green";
 
       window.location.href = "dashboard.html";
-
-    } catch (error) {
+    }
+    
+    // Falhas de Login
+    catch (error) {
       console.error("Erro signIn:", error);
       if (error.code === "auth/user-not-found") {
         mensagem.textContent = "Usuário não encontrado.";

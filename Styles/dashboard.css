@@ -16,3 +16,9 @@ h1{
     grid-template-columns: 1fr 1fr;
     gap: 500px;
 }
+
+.teste{
+    margin: auto;
+    text-align: center;
+    
+}

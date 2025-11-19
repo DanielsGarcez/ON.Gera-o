@@ -28,67 +28,67 @@
 
       <form action="." class="cadastro">
 
-        <section class="dados-perfil">
+        <section class="dados-perfil bloqueio-input">
           <aside>
             <section class="grupo-input">
-              <label for="">Email:</label>
-              <input type="email">
+              <label>Email:</label>
+              <input id="email" type="email">
             </section>
             <section class="grupo-input">
-              <label for="">Nome:</label>
-              <input type="text">
+              <label>Nome:</label>
+              <input id="nome" type="text">
             </section>
             <section class="grupo-input">
-              <label for="">CPF:</label>
-              <input type="text">
+              <label>CPF:</label>
+              <input id="cpf" type="text">
             </section>
           </aside>
 
           <aside>
             <section class="grupo-input">
-              <label for="">Data de Nascimento:</label>
-              <input type="date">
+              <label>Data de Nascimento:</label>
+              <input id="data-nasc" type="date">
             </section>
             <section class="grupo-input">
-              <label for="">Estado Civil:</label>
-              <input type="text">
-            </section>
-            
-            <section class="grupo-input">
-              <label for="">Renda:</label>
-              <input type="text">
+              <label>Estado Civil:</label>
+              <input type="civil">
             </section>
             
             <section class="grupo-input">
-              <label for="">Composição Familiar:</label>
-              <input type="text">
+              <label>Renda:</label>
+              <input id="renda" type="text">
             </section>
             
             <section class="grupo-input">
-              <label for="">Endereço:</label>
-              <input type="text">
+              <label>Composição Familiar:</label>
+              <input id="familia" type="text">
             </section>
             
             <section class="grupo-input">
-              <label for="">N°:</label>
-              <input type="number">
+              <label>Endereço:</label>
+              <input id="endereco" type="text">
             </section>
             
             <section class="grupo-input">
-              <label for="">CEP:</label>
-              <input type="text">
+              <label>N°:</label>
+              <input id="enderecoNum" type="number">
+            </section>
+            
+            <section class="grupo-input">
+              <label>CEP:</label>
+              <input id="cep" type="text">
             </section>
             <section class="grupo-input">
-              <label for="">Cidade:</label>
-              <input type="text">
+              <label>Cidade:</label>
+              <input id="cidade" type="text">
             </section>
             <section class="grupo-input">
-              <label for="">Estado:</label>
-              <input type="text">
+              <label>Estado:</label>
+              <input id="estado" type="text">
             </section>
             <section class="grupo-input">
-              <label for="">Telefone:</label>
-              <input type="text">
+              <label>Telefone:</label>
+              <input id="telefone" type="text">
             </section>
           </aside>
         </section>
@@ -97,11 +97,13 @@
 
 
 
-    <h1>Bem-vindo!</h1>
+    <article class="teste">
+      <h1>Bem-vindo!</h1>
+      <p>Usuário logado: <span id="userEmail"></span></p>
+      
+      <button onclick="logout()">Sair</button>
+    </article>
 
-    <p>Usuário logado: <span id="userEmail"></span></p>
-    
-    <button onclick="logout()">Sair</button>
   </main>
 </body>
 </html>
