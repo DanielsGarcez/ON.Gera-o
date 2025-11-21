@@ -1,0 +1,49 @@
+:root {
+    /* Cores Prédefinidas */
+    --corAzul: #0F5A93;
+    --corBranco: #FAFAFA;
+    --corCinzaClaro: #f8f8f8;
+    --corCinzaEscuro: #616161;
+    --corPreto: #000;
+
+    /* Tipografia */
+    --fonteInter: 'Inter', sans-serif;
+}
+
+main {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+h1{
+    color: var(--corAzul);
+}
+
+section{
+    text-align: justify;
+}
+
+
+
+
+
+/* HTML IMPORTADO DO JAVASCRIPT */
+
+.card-ong{
+    display: flex;
+    gap: 40px;
+}
+
+hr{
+    margin: 10px 0px;
+}
+
+button{
+    min-width: 10%;
+}

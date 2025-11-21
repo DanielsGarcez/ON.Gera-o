@@ -14,12 +14,13 @@
 }
 
 *{
-    /* Dimensionamento Padrão Global */
-    margin: 0;
-    padding: 0;
+  /* Dimensionamento Padrão Global */
+  margin: 0;
+  padding: 0;
 
-    /* Fonte */
-    font-family: var(--fonteInter);
+  /* Fonte */
+  font-family: var(--fonteInter);
+  z-index: 1000;
 }
 
 .topbar {

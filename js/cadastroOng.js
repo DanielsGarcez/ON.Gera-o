@@ -14,27 +14,26 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
-  // Pega os ID do Formulario de ONGs
-  const nomeOng = document.getElementById("nome-ong").value;
-  const numCnpj = document.getElementById("cnpj").value
-  const areaAtuacao = document.getElementById("area-atuacao").value
-  const descricaoOng = document.getElementById("descricao").value;
+    // Pega os ID do Formulario de ONGs
+    const nomeOng = document.getElementById("nome-ong").value;
+    const numCnpj = document.getElementById("cnpj").value;
+    const areaAtuacao = document.getElementById("area-atuacao").value;
+    const descricaoOng = document.getElementById("descricao").value;
 
-  const enderecoOng  = document.getElementById("endereco-ong").value;
-  const numEnderecoOng  = document.getElementById("num-endereco-ong").value;
-  const numCepOng  = document.getElementById("cep-ong").value;
-  const cidadeOng  = document.getElementById("cidade-ong").value;
-  const estadoOng  = document.getElementById("estado-ong").value;
-  const numTelefoneOng  = document.getElementById("telefone-ong").value;
-  const siteOng  = document.getElementById("site-ong").value;
+    const enderecoOng = document.getElementById("endereco-ong").value;
+    const numEnderecoOng = document.getElementById("num-endereco-ong").value;
+    const numCepOng = document.getElementById("cep-ong").value;
+    const cidadeOng = document.getElementById("cidade-ong").value;
+    const estadoOng = document.getElementById("estado-ong").value;
+    const numTelefoneOng = document.getElementById("telefone-ong").value;
+    const siteOng = document.getElementById("site-ong").value;
 
     // Validação de Campos
-    if ( 
+    if (
       !nomeOng ||
       !numCnpj ||
       !areaAtuacao ||
       !descricaoOng ||
-
       !enderecoOng ||
       !numEnderecoOng ||
       !numCepOng ||
@@ -43,9 +42,10 @@ document.addEventListener("DOMContentLoaded", () => {
       !numTelefoneOng ||
       !siteOng
     ) {
-        alert("Por favor, preencha todos os campos.");
-        return;
+      alert("Por favor, preencha todos os campos.");
+      return;
     }
+
     console.log("Cadastro válido! Enviando dados...");
 
     try {
@@ -53,15 +53,15 @@ document.addEventListener("DOMContentLoaded", () => {
       const docRef = await addDoc(collection(db, "ongs"), {
         nome: nomeOng,
         cnpj: numCnpj,
-        atuacao: areaAtuacao,
+        categoria: areaAtuacao,
         descricao: descricaoOng,
 
         endereco: enderecoOng,
-        numedereco: numEnderecoOng,
-        numcepong: numCepOng,
+        numero_endereco: numEnderecoOng,
+        cep: numCepOng,
         cidade: cidadeOng,
         estado: estadoOng,
-        numtelong: numTelefoneOng,
+        telefone: numTelefoneOng,
         site: siteOng,
 
         criadoEm: new Date()
