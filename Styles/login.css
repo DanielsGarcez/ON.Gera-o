@@ -3,7 +3,7 @@
 :root {
     /* Cores Prédefinidas */
     --corAzul: #0F5A93;
-    --corBranco: #FAFAFA;
+    --corBranco: #fff;
     --corCinzaClaro: #f8f8f8;
     --corCinzaEscuro: #616161;
     --corPreto: #000;
@@ -67,8 +67,6 @@ main article{
     color: var(--corAzul);
 }
 
-
-
 label{
     min-height: 25px;
 
@@ -86,7 +84,19 @@ input{
     border-radius: 5px;
 }
 
-.grupo-input {
+
+select{
+    /* Dimensionamento */
+    min-height: 35px;
+
+    /* Cores */
+    color: var(--corPreto);
+    background-color: var(--corBranco);
+    border: 1px solid var(--corCinzaEscuro); 
+    border-radius: 5px;
+}
+
+.grupo-input{
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
